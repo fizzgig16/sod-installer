@@ -199,7 +199,7 @@ def Main()
 	end	
 
 	digest = Digest::MD5.hexdigest(File.read("EQ_setup.exe"))
-	if (digest != "25a22975f78cfd0262e46831ff58916d")
+	unless (digest == "25a22975f78cfd0262e46831ff58916d" or digest == "692d56ecfa277f7926be2f6584e6b98a")
 		puts("ERROR: the Everquest Live executable had an incorrect checksum. Please download it from http://everquest.station.sony.com.")
 		exit -1
 	end
